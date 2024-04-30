@@ -3,7 +3,9 @@ from datetime import datetime, timedelta
 from dataclasses import dataclass
 from dateutil.relativedelta import relativedelta
 import numpy as np
+import pandas as pd
 from pandas import DataFrame, Timestamp
+import matplotlib.pyplot as plt
 
 @dataclass
 class TimeSeriesAsset:
