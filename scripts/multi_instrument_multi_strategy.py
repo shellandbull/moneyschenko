@@ -5,7 +5,7 @@ import pandas as pd
 
 # Fetch historical data
 def fetch_data(instruments = "BTC-USD CRO-USD"):
-    data = yf.download(instruments, start="2023-01-01", end="2023-03-01")['Close']
+    data = yf.download(instruments, start="2022-01-01", end="2023-03-01")['Close']
     return data
 
 # Calculate the portfolio value

@@ -3,7 +3,7 @@ import matplotlib.pyplot as plt
 import pandas as pd
 
 # Define the tickers
-tickers = yf.Tickers('BTC-USD CRO-USD USDC-USD')
+tickers = yf.Tickers('BTC-USD CRO-USD')
 
 # Get historical data for the last 2 months
 data = tickers.history(period="2mo")
