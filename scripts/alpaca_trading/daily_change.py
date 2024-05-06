@@ -1,5 +1,3 @@
-!#/opt/anaconda3/bin/python3
-
 import os
 import yfinance as yf
 import numpy as np
