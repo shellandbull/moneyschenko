@@ -6,10 +6,14 @@ import numpy as np
 import pandas as pd
 from pandas import DataFrame, Timestamp
 import matplotlib.pyplot as plt
+from yahooquery import Screener
 
 
-instruments        = pd.read_csv('data/nasdaq-instrument-list.csv')
-instrument_symbols = instruments["Symbol"].to_list()
+s = Screener()
+data = s.get_screeners('all_cryptocurrencies_us', count=250)
+dicts = data['all_cryptocurrencies_us']['quotes']
+instrument_symbols = [d['symbol'] for d in dicts]
+
 delta              = timedelta(days=-300)
 today              = datetime.now()
 in_groups_of_50    = np.array_split(instrument_symbols, 50)
